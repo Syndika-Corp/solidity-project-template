@@ -1,6 +1,6 @@
 # Solidity project template
 
-[![Coverage Status](https://codecov.io/gh/apm1001/solidity-template/branch/main/graph/badge.svg)](https://codecov.io/gh/apm1001/solidity-template)
+[![Coverage Status](https://codecov.io/gh/Syndika-Corp/solidity-project-template/branch/main/graph/badge.svg)](https://codecov.io/gh/Syndika-Corp/solidity-project-template)
 
 
 > Template to kickstart a solidity project
