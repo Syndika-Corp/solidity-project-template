@@ -1,0 +1,46 @@
+{
+  "name": "solidity-project-template",
+  "version": "0.0.1",
+  "description": "Template to kickstart smart-contract development",
+  "main": "dist/index.js",
+  "files": [
+    "dist/",
+    "docs/"
+  ],
+  "author": "Mihail Ceban, Maxim Cojocari-Goncear",
+  "license": "MIT",
+  "scripts": {
+    "chain": "yarn hardhat node",
+    "coverage": "yarn hardhat coverage",
+    "docs": "yarn hardhat docgen",
+    "compile": "yarn hardhat compile",
+    "build": "yarn tsc",
+    "deploy": "yarn hardhat run scripts/deploy.ts --network $network_name",
+    "test": "yarn hardhat test"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.2",
+    "hardhat": "^2.15.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@nomicfoundation/hardhat-verify": "^1.0.0",
+    "@typechain/ethers-v6": "^0.4.0",
+    "@typechain/hardhat": "^8.0.0",
+    "@types/chai": "^4.2.0",
+    "@types/mocha": ">=9.1.0",
+    "@types/node": ">=12.0.0",
+    "chai": "^4.2.0",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.4.0",
+    "hardhat-gas-reporter": "^1.0.8",
+    "solidity-coverage": "^0.8.0",
+    "solidity-docgen": "^0.6.0-beta.35",
+    "ts-node": ">=8.0.0",
+    "typechain": "^8.1.0",
+    "typescript": "5.0.4"
+  }
+}

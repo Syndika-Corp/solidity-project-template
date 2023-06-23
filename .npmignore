@@ -1,0 +1,13 @@
+cache/
+contracts/
+coverage/
+scripts/
+test/
+
+.env
+.gitignore
+coverage.json
+example.env
+hardhat.config.ts 
+tsconfig.json
+yarn.lock
