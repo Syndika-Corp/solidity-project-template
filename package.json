@@ -7,7 +7,18 @@
     "dist/",
     "docs/"
   ],
-  "author": "Mihail Ceban, Maxim Cojocari-Goncear",
+  "contributors": [
+    {
+      "name": "Mihail Ceban",
+      "email": "",
+      "url": "https://github.com/apm1001"
+    },
+    {
+      "name": "Maxim Cojocari-Goncear",
+      "email": "",
+      "url": "https://github.com/MaxCojocari"
+    }
+  ],
   "license": "MIT",
   "scripts": {
     "chain": "yarn hardhat node",
