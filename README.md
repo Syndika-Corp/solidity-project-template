@@ -13,7 +13,7 @@
 
 ## Before start...
 
-1. Clone this repo `git clone git@github.com:apm1001/solidity-repo-test.git` or create a new repository from this template in github.
+1. Clone this repo `git clone git@github.com:Syndika-Corp/solidity-project-template.git` or create a new repository from this template in github.
 2. Adjust `package.json` if necessary:
     - name
     - version
