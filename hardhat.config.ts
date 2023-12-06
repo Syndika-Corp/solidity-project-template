@@ -60,7 +60,7 @@ const config: HardhatUserConfig = {
     // Obtain one at https://etherscan.io/
     apiKey: process.env.ETHERSCAN_API_KEY,
   },
-  solidity: "0.8.18",
+  solidity: "0.8.22",
   docgen: {}, // if necessary to customize config
 };
 
