@@ -1,54 +1,54 @@
 digraph G {
-  graph [ ratio = "auto", page = "100", compound =true, bgcolor = "#2e3e56" ];
-  node [ style = "filled", fillcolor = "#edad56", color = "#edad56", penwidth =3 ];
-  edge [ color = "#fcfcfc", penwidth =2, fontname = "helvetica Neue Ultra Light" ];
-subgraph "clusterLock" {
-  graph [ label = "Lock", color = "#445773", fontcolor = "#f0f0f0", style = "rounded", bgcolor = "#445773" ];
-  "Lock.<Constructor>" [ label = "<Constructor>", color = "brown", fillcolor = "#FF9797" ];
-  "Lock.withdraw" [ label = "withdraw", color = "#FF9797", fillcolor = "#FF9797" ];
-  "Lock.payable" [ label = "payable" ];
-  "Lock.address" [ label = "address" ];
-}
-
-subgraph "clusterowner" {
-  graph [ label = "owner", color = "#e8726d", fontcolor = "#f0f0f0", style = "rounded,dashed", bgcolor = "#3b4b63" ];
-  "owner.transfer" [ label = "transfer" ];
-}
-
-  "Lock.<Constructor>";
-  "Lock.payable";
-  "Lock.withdraw";
-  "Lock.address";
-  "owner.transfer";
-  "Lock.<Constructor>" -> "Lock.payable" [ color = "#1bc6a6" ];
-  "Lock.withdraw" -> "Lock.address" [ color = "#1bc6a6" ];
-  "Lock.withdraw" -> "owner.transfer" [ color = "white" ];
-  "Lock.withdraw" -> "Lock.address" [ color = "#1bc6a6" ];
-
-
-rankdir=LR
-node [shape=plaintext]
-subgraph cluster_01 { 
-label = "Legend";
-key [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
-  <tr><td align="right" port="i1">Internal Call</td></tr>
-  <tr><td align="right" port="i2">External Call</td></tr>
-  <tr><td align="right" port="i3">Defined Contract</td></tr>
-  <tr><td align="right" port="i4">Undefined Contract</td></tr>
-  </table>>]
-key2 [label=<<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
-  <tr><td port="i1">&nbsp;&nbsp;&nbsp;</td></tr>
-  <tr><td port="i2">&nbsp;&nbsp;&nbsp;</td></tr>
-  <tr><td port="i3" bgcolor="#445773">&nbsp;&nbsp;&nbsp;</td></tr>
-  <tr><td port="i4">
-    <table border="1" cellborder="0" cellspacing="0" cellpadding="7" color="#e8726d">
-      <tr>
-       <td></td>
-      </tr>
-     </table>
-  </td></tr>
-  </table>>]
-key:i1:e -> key2:i1:w [color="#1bc6a6"]
-key:i2:e -> key2:i2:w [color="white"]
-}
+    graph [ratio = "auto"; page = "100"; compound = true; bgcolor = "#2e3e56";];
+    node [style = "filled"; fillcolor = "#edad56"; color = "#edad56"; penwidth = 3;];
+    edge [color = "#fcfcfc"; penwidth = 2; fontname = "helvetica Neue Ultra Light";];
+    subgraph "clusterLock" {
+        graph [label = "Lock"; color = "#445773"; fontcolor = "#f0f0f0"; style = "rounded"; bgcolor = "#445773";];
+        "Lock.<Constructor>" [label = "<Constructor>";color = "brown";fillcolor = "#FF9797";];
+        "Lock.withdraw" [label = "withdraw";color = "#FF9797";fillcolor = "#FF9797";];
+        "Lock.payable" [label = "payable";];
+        "Lock.address" [label = "address";];
+    }
+    
+    subgraph "clusterowner" {
+        graph [label = "owner"; color = "#e8726d"; fontcolor = "#f0f0f0"; style = "rounded,dashed"; bgcolor = "#3b4b63";];
+        "owner.transfer" [label = "transfer";];
+    }
+    
+    "Lock.<Constructor>";
+    "Lock.payable";
+    "Lock.withdraw";
+    "Lock.address";
+    "owner.transfer";
+    "Lock.<Constructor>" -> "Lock.payable" [color = "#1bc6a6";];
+    "Lock.withdraw" -> "Lock.address" [color = "#1bc6a6";];
+    "Lock.withdraw" -> "owner.transfer" [color = "white";];
+    "Lock.withdraw" -> "Lock.address" [color = "#1bc6a6";];
+    
+    
+    rankdir = LR;
+    node [shape = plaintext;];
+    subgraph cluster_01 {
+        label = "Legend";
+        key [label = <<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
+            <tr><td align="right" port="i1">Internal Call</td></tr>
+            <tr><td align="right" port="i2">External Call</td></tr>
+            <tr><td align="right" port="i3">Defined Contract</td></tr>
+            <tr><td align="right" port="i4">Undefined Contract</td></tr>
+            </table>>;];
+        key2 [label = <<table border="0" cellpadding="2" cellspacing="0" cellborder="0">
+            <tr><td port="i1">&nbsp;&nbsp;&nbsp;</td></tr>
+            <tr><td port="i2">&nbsp;&nbsp;&nbsp;</td></tr>
+            <tr><td port="i3" bgcolor="#445773">&nbsp;&nbsp;&nbsp;</td></tr>
+            <tr><td port="i4">
+            <table border="1" cellborder="0" cellspacing="0" cellpadding="7" color="#e8726d">
+            <tr>
+            <td></td>
+            </tr>
+            </table>
+            </td></tr>
+            </table>>;];
+        key:i1:e -> key2:i1:w [color = "#1bc6a6";];
+        key:i2:e -> key2:i2:w [color = "white";];
+    }
 }
