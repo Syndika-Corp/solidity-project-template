@@ -10,7 +10,7 @@
     "outDir": "./dist",
     "declaration": true
   },
-  "include": [
-    "index.ts",
-  ]
+  "exclude": ["dist", "node_modules"],
+  "include": ["./test", "./scripts", "./deploy", "index.ts"],
+  "files": ["./hardhat.config.ts"]
 }
