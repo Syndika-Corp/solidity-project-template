@@ -1,5 +1,5 @@
-import { HardhatUserConfig } from "hardhat/config";
-import "@nomicfoundation/hardhat-toolbox";
+import { HardhatUserConfig } from 'hardhat/config';
+import '@nomicfoundation/hardhat-toolbox';
 import 'solidity-docgen';
 import 'solidity-coverage';
 import 'dotenv/config';
@@ -20,7 +20,6 @@ const config: HardhatUserConfig = {
       //   mempool: {
       //     order: "priority",
       //   },
-
       // },
       // blockGasLimit: 30000000,
       // minGasPrice: 1_000_000_000,
@@ -29,7 +28,7 @@ const config: HardhatUserConfig = {
       // accounts: []
     },
     localhost: {
-      url: "http://127.0.0.1:8545/",
+      url: 'http://127.0.0.1:8545/',
     },
     /*
       Uncomment networks to be used
@@ -60,7 +59,7 @@ const config: HardhatUserConfig = {
     // Obtain one at https://etherscan.io/
     apiKey: process.env.ETHERSCAN_API_KEY,
   },
-  solidity: "0.8.22",
+  solidity: '0.8.24',
   docgen: {}, // if necessary to customize config
 };
 

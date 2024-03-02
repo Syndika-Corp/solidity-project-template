@@ -1,12 +1,8 @@
-import * as fs from 'fs'
+import * as fs from 'fs';
 import * as path from 'path';
 import { FileNotFoundError } from './errors/file-not-found';
 
-export async function writeAddress(
-  contractName: string,
-  networkName: string,
-  address: string
-) {
+export async function writeAddress(contractName: string, networkName: string, address: string) {
   const dirPath = path.join('./addresses');
   const filePath = path.join(dirPath, `${contractName}.json`);
   try {
@@ -24,18 +20,18 @@ export async function writeAddress(
         }
 
         fs.writeFileSync(filePath, text);
-      })
+      });
     } else {
       // check if directory exists
       if (!fs.existsSync(dirPath)) {
         // create a directory
-        fs.mkdir(dirPath, { recursive: true }, (err) => {
+        fs.mkdir(dirPath, { recursive: true }, err => {
           if (err) throw err;
         });
       }
       const obj = {
-        [networkName]: address
-      }
+        [networkName]: address,
+      };
       fs.writeFileSync(filePath, JSON.stringify(obj));
     }
   } catch (err) {

@@ -30,10 +30,10 @@ Withdrawal event.
 
 #### Parameters
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
+| Name   | Type    | Description              |
+| ------ | ------- | ------------------------ |
 | amount | uint256 | The amount of withdrawal |
-| when | uint256 | The event triger time |
+| when   | uint256 | The event triger time    |
 
 ### constructor
 
@@ -45,9 +45,9 @@ Constructor.
 
 #### Parameters
 
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| _unlockTime | uint256 | The time when locked amount is available for withdraw |
+| Name         | Type    | Description                                           |
+| ------------ | ------- | ----------------------------------------------------- |
+| \_unlockTime | uint256 | The time when locked amount is available for withdraw |
 
 ### withdraw
 
@@ -56,4 +56,3 @@ function withdraw() public
 ```
 
 Withdraw locked amount.
-

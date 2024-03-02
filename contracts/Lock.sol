@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.22;
+pragma solidity ^0.8.24;
 
 /**
  * @title Lock contract
@@ -28,10 +28,7 @@ contract Lock {
      * @param _unlockTime The time when locked amount is available for withdraw
      */
     constructor(uint _unlockTime) payable {
-        require(
-            block.timestamp < _unlockTime,
-            "Unlock time should be in the future"
-        );
+        require(block.timestamp < _unlockTime, "Unlock time should be in the future");
 
         unlockTime = _unlockTime;
         owner = payable(msg.sender);

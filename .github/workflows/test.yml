@@ -2,24 +2,25 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, dev ]
   pull_request:
     branches: [ main ]
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/setup
       - run: yarn test
 
+  # ONLY FOR PUBLIC REPOSITORIES
   coverage:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/setup
       - run: yarn coverage
-      - uses: codecov/codecov-action@v3
+      - uses: codecov/codecov-action@v4
         env: 
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         
